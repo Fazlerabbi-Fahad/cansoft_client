@@ -41,8 +41,8 @@ const Product = () => {
     }
 
     return (
-        <div>
-            <div className="h-96 carousel carousel-vertical rounded-box center ml-auto mr-auto block">
+        <div className='lg:ml-5'>
+            <div className="h-96 carousel carousel-vertical center block my-3">
                 <div className="carousel-item h-full">
                     <img src={images[0]} alt={title} />
                 </div>
@@ -57,65 +57,66 @@ const Product = () => {
                 </div>
 
             </div>
-            <div>
-                <div className='w-[50vw]'><div className="card ">
-                    <div className="card-body">
-                        <form onSubmit={handleEdit}>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Title</span>
-                                </label>
-                                <input type="text" defaultValue={title} name="title" className="input input-bordered" />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Description</span>
-                                </label>
-                                <input type="text" defaultValue={description} name="description" className="input input-bordered" />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Price</span>
-                                </label>
-                                <input type="text" defaultValue={price} name="price" className="input input-bordered" />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Discount Percentage</span>
-                                </label>
-                                <input type="text" defaultValue={discountPercentage} name="discountPercentage" className="input input-bordered" />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Rating</span>
-                                </label>
-                                <input type="text" defaultValue={rating} name="rating" className="input input-bordered" />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Stock</span>
-                                </label>
-                                <input type="text" defaultValue={stock} name="stock" className="input input-bordered" />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Brand</span>
-                                </label>
-                                <input type="text" defaultValue={brand} name="brand" className="input input-bordered" />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Category</span>
-                                </label>
-                                <input type="text" defaultValue={category} name="category" className="input input-bordered" />
-                            </div>
-                            <div className="form-control mt-6">
-                                <button className='btn btn-primary' type="submit">Update</button>
+            <div className='my-3'>
+                <div className='lg:w-[50vw]'>
+                    <div className="card ">
+                        <div className="card shadow-3xl p-10 glass ">
+                            <form onSubmit={handleEdit}>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text text-white">Title</span>
+                                    </label>
+                                    <input type="text" defaultValue={title} name="title" className="input input-bordered text-white" />
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text text-white">Description</span>
+                                    </label>
+                                    <input type="text" defaultValue={description} name="description" className="input input-bordered text-white" />
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text text-white">Price</span>
+                                    </label>
+                                    <input type="text" defaultValue={price} name="price" className="input input-bordered text-white" />
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text text-white">Discount Percentage</span>
+                                    </label>
+                                    <input type="text" defaultValue={discountPercentage} name="discountPercentage" className="input input-bordered text-white" />
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text text-white">Rating</span>
+                                    </label>
+                                    <input type="text" defaultValue={rating} name="rating" className="input input-bordered text-white" />
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text text-white">Stock</span>
+                                    </label>
+                                    <input type="text" defaultValue={stock} name="stock" className="input input-bordered text-white" />
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text text-white">Brand</span>
+                                    </label>
+                                    <input type="text" defaultValue={brand} name="brand" className="input input-bordered text-white" />
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text text-white">Category</span>
+                                    </label>
+                                    <input type="text" defaultValue={category} name="category" className="input input-bordered text-white" />
+                                </div>
+                                <div className="form-control mt-6">
+                                    <button className='btn btn-primary text-white' type="submit">Update</button>
 
-                            </div>
-                        </form>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                </div>
                 </div>
             </div>
         </div>

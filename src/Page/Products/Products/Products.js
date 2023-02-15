@@ -11,17 +11,18 @@ const Products = () => {
     }, []);
 
     return (
-        <div className="overflow-x-auto w-full">
-            <table className="table w-full">
+        <div className="overflow-x-auto w-full glass">
+            <table className="table w-full glass">
                 <thead>
                     <tr>
-                        <th>Thumbnail</th>
-                        <th>ID</th>
-                        <th>Title</th>
-                        <th>Price</th>
-                        <th>Rating</th>
-                        <th>Stock</th>
-                        <th>Category</th>
+                        <th className='text-white'>Thumbnail</th>
+                        <th className='text-white'>ID</th>
+                        <th className='text-white'>Title</th>
+                        <th className='text-white'>Price</th>
+                        <th className='text-white'>Rating</th>
+                        <th className='text-white'>Stock</th>
+                        <th className='text-white'>Category</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>

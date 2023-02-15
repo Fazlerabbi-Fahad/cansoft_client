@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -19,7 +20,7 @@ const SignUp = () => {
             password: password
         }
 
-        fetch('http://localhost:5000/users', {
+        fetch('http://localhost:5000/api/register', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -40,11 +41,11 @@ const SignUp = () => {
                 <div className="text-center">
                     <h1 className="text-5xl font-bold">Sign Up!</h1>
                 </div>
-                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl">
+                <div className="card w-96 shadow-3xl p-10 glass">
                     <form onSubmit={handleSubmit(handleSignUp)}>
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
-                                <span className="label-text">First Name</span>
+                                <span className="label-text text-white">First Name</span>
                             </label>
                             <input type='name' {...register("first_name", { required: true })}
                                 placeholder="first name" className="input input-bordered w-full max-w-xs text-white" />
@@ -85,6 +86,9 @@ const SignUp = () => {
                                 placeholder="confirm password" className="input input-bordered w-full max-w-xs text-white" />
                         </div>
                         <input className='btn btn-primary bg-gradient-to-r from-primary to-secondary text-white uppercase w-full mt-4' value='Sign Up' type="submit" />
+                        <label class="label">
+                            <Link to='/login' class="label-text-alt link link-hover text-white">Have an Account</Link>
+                        </label>
                     </form>
                 </div>
             </div>

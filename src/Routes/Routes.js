@@ -13,6 +13,10 @@ const routes = createBrowserRouter([
         element: <Main></Main>,
         children: [
             {
+                path: '/',
+                element: <Login></Login>
+            },
+            {
                 path: '/products',
                 element: <Products></Products>
             },

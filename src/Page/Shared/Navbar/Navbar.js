@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
 
     const menuItems = <>
-        <li><Link to="/products">Products</Link></li>
-        <li><Link to="/accounts">Accounts</Link></li>
-        <li><Link to="/login">Login</Link></li>
-        <li><Link to="/signup">Sign Up</Link></li>
+        <li><Link to="/products" className='text-white'>Products</Link></li>
+        <li><Link to="/accounts" className='text-white'>Accounts</Link></li>
+        <li><Link to="/login" className='text-white'>Login</Link></li>
+        <li><Link to="/signup" className='text-white'>Sign Up</Link></li>
     </>
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar glass">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -21,7 +21,7 @@ const Navbar = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                <Link to='/login' className="btn btn-ghost normal-case text-xl text-white font-bold">CansSOFT</Link>
             </div>
             <div className="navbar-center hidden lg:flex navbar-end">
                 <ul className="menu menu-horizontal px-1">
