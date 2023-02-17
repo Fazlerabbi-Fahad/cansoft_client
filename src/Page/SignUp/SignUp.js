@@ -20,7 +20,7 @@ const SignUp = () => {
             password: password
         }
 
-        fetch('http://localhost:5000/api/register', {
+        fetch('https://cansoft-server-fazlerabbi-fahad.vercel.app/api/register', {
             method: "POST",
             headers: {
                 "content-type": "application/json"

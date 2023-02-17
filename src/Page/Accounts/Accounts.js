@@ -7,7 +7,7 @@ const Accounts = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/users/')
+        fetch('https://cansoft-server-fazlerabbi-fahad.vercel.app/users/')
             .then(res => res.json())
             .then(data => setUser(data))
     }, [])
@@ -27,7 +27,7 @@ const Accounts = () => {
             password: password
         }
 
-        fetch(`http://localhost:5000/users/${data._id}`, {
+        fetch(`https://cansoft-server-fazlerabbi-fahad.vercel.app/users/${data._id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"

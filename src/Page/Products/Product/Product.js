@@ -6,6 +6,7 @@ const Product = () => {
     const { _id, title, images, description, price, discountPercentage, rating, stock, brand, category } = product;
 
     const handleEdit = event => {
+        event.preventDefault();
         const form = event.target;
         const title = form.title.value;
         const description = form.description.value;
@@ -27,8 +28,10 @@ const Product = () => {
             brand: brand,
             category: category
         }
+        console.log(product);
 
-        fetch(`http://localhost:5000/products/${_id}`, {
+
+        fetch(`https://cansoft-server-fazlerabbi-fahad.vercel.app/products/${_id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json',

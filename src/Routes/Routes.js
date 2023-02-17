@@ -34,7 +34,7 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/products/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`),
+                loader: ({ params }) => fetch(`https://cansoft-server-fazlerabbi-fahad.vercel.app/products/${params.id}`),
                 element: <Product></Product>
             },
 
